@@ -1,25 +1,27 @@
 # Ember-countup
 
-This README outlines the details of collaborating on this Ember addon.
+A [countUp.js](https://inorganik.github.io/countUp.js/) integration for Ember
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-countup`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Basic example
+```handlebars
+{{count-up startVal=0 endVal=42 duration=2}}
+```
 
-## Running Tests
+Full example, showing default values
+```handlebars
+{{count-up startVal=0 endVal=42 duration=2 decimals=0 useEasing=false useGrouping=false separator=',' decimal='.' prefix='' suffix=''}}
+```
 
-* `ember test`
-* `ember test --server`
+## Styling
 
-## Building
+Style a `span` with the class `.ember-countup`:
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```html
+<span id="ember389" class="ember-view ember-countup">42</span>
+```

@@ -1,7 +1,7 @@
 {
   "name": "ember-countup",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "A countUp.js integration for Ember",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,18 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pogopaule/ember-countup.git"
+  },
+  "bugs": {
+    "url": "http://www.github.com/pogopaule/ember-countup/issues"
+  },
+  "homepage": "http://www.github.com/pogopaule/ember-countup",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "pogopaule",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
@@ -38,7 +45,9 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "countUp.js",
+    "animation"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3"

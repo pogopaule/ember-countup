@@ -1,3 +1,12 @@
-<h2 id="title">Welcome to Ember</h2>
+{{count-up startVal=startVal endVal=endVal duration=duration decimals=decimals useEasing=useEasing useGrouping=useGrouping separator=separator decimal=decimal prefix=prefix suffix=suffix}}
 
-{{outlet}}
+<div>startVal:{{input value=startVal}}</div>
+<div>endVal: {{input value=endVal}}</div>
+<div>duration: {{input value=duration}}</div>
+<div>decimals: {{input value=decimals}}</div>
+<div>useEasing: {{input type='checkbox' checked=useEasing}}</div>
+<div>useGrouping: {{input type='checkbox' checked=useGrouping}}</div>
+<div>separator: {{input value=separator}}</div>
+<div>decimal: {{input value=decimal}}</div>
+<div>prefix: {{input value=prefix}}</div>
+<div>suffix: {{input value=suffix}}</div>

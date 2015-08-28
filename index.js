@@ -8,5 +8,9 @@ module.exports = {
     this._super.included(app);
 
     app.import(app.bowerDirectory + '/countUp.js/dist/countUp.js');
+  },
+
+  afterInstall: function() {
+    return this.addBowerPackageToProject('countUp.js');
   }
 };

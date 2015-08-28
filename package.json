@@ -1,6 +1,6 @@
 {
   "name": "ember-countup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A countUp.js integration for Ember",
   "directories": {
     "doc": "doc",

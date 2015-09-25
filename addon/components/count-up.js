@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       new CountUp(
         this.get('elementId'),
         this.get('startVal') || 0,
-        this.get('endVal') || 42,
+        this.get('endVal') || 0,
         this.get('decimals') || 0,
         this.get('duration') || 2,
         {

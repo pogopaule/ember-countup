@@ -60,6 +60,23 @@ customEasing: function(t, b, c, d) {
 }
 ```
 
+Example using the [onComplete callback](https://github.com/inorganik/countUp.js#usage)
+```handlebars
+{{count-up
+    startVal=0
+    endVal=42
+    duration=2
+    onComplete=(action 'showMessage')}}
+```
+
+```javascript
+actions: {
+  showMessage() {
+    alert('count up done');
+  }
+}
+```
+
 Check out the [dummy app](https://github.com/pogopaule/ember-countup/tree/master/tests/dummy/app) for a working example.
 
 ## Styling

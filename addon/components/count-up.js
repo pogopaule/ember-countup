@@ -8,13 +8,13 @@ export default Ember.Component.extend({
     this._insertAndStartCountUp();
   },
 
-  changed: Ember.observer('startVal', 'endVal', 'decimals', 'duration', 'useEasing', 'easingFn', 'useGrouping', 'separator', 'decimal', 'prefix', 'suffix', 'formattingFn', function() {
+  changed: Ember.observer('startVal', 'endVal', 'decimals', 'duration', 'useEasing', 'easingFn', 'useGrouping', 'separator', 'decimal', 'prefix', 'suffix', 'formattingFn', 'onComplete', function() {
     this._insertAndStartCountUp();
   }),
 
   _insertAndStartCountUp() {
     Ember.run.next(() => {
-      new CountUp(
+      var countup = new CountUp(
         this.get('elementId'),
         this.get('startVal') || 0,
         this.get('endVal') || 0,
@@ -30,7 +30,13 @@ export default Ember.Component.extend({
           suffix: this.get('suffix') || '',
           formattingFn: this.get('formattingFn')
         }
-      ).start();
+      );
+
+      if (this.attrs.onComplete) {
+        countup.start(this.attrs.onComplete);
+      } else {
+        countup.start();
+      }
     });
   }
 });

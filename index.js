@@ -9,4 +9,5 @@ module.exports = {
 
     app.import(app.bowerDirectory + '/countUp.js/dist/countUp.js');
   }
+
 };

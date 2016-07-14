@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     this._insertAndStartCountUp();
   },
 
-  changed: Ember.observer('startVal', 'endVal', 'decimals', 'duration', 'useEasing', 'useGrouping', 'separator', 'decimal', 'prefix', 'suffix', function() {
+  changed: Ember.observer('startVal', 'endVal', 'decimals', 'duration', 'useEasing', 'easingFn', 'useGrouping', 'separator', 'decimal', 'prefix', 'suffix', 'formattingFn', function() {
     this._insertAndStartCountUp();
   }),
 
@@ -22,11 +22,13 @@ export default Ember.Component.extend({
         this.get('duration') || 2,
         {
           useEasing: this.get('useEasing'),
+          easingFn: this.get('easingFn'),
           useGrouping: this.get('useGrouping'),
           separator: this.get('separator') || ',',
           decimal: this.get('decimal') || '.',
           prefix: this.get('prefix') || '',
-          suffix: this.get('suffix') || ''
+          suffix: this.get('suffix') || '',
+          formattingFn: this.get('formattingFn')
         }
       ).start();
     });

@@ -8,6 +8,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('countUp.js');
+    return this.addBowerPackageToProject('countUp.js', '1.7.1');
   }
 };
